@@ -2,6 +2,10 @@
 
 Frontend capstone project built with HTML, CSS, JavaScript, and Node.js.
 
+## About
+
+This repository is the starting point for the FlyRank frontend capstone assignment. You will build a client-side web application using HTML, CSS, and JavaScript, with Node.js for local development tooling and Git for version control throughout the project.
+
 ## Tech Stack
 
 | Technology | Purpose |
