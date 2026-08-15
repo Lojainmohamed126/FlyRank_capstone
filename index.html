@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components/settings-form.css">
+</head>
+
+<body>
+    <main class="page-shell">
+        <section class="settings-card" aria-labelledby="settings-title">
+            <header class="settings-card__header">
+                <p class="eyebrow">Account</p>
+                <h1 id="settings-title">Settings</h1>
+                <p>Update your contact details and notification preference.</p>
+            </header>
+
+            <form id="settings-form" class="settings-form" novalidate>
+                <div class="form-field">
+                    <label for="name">Name <span aria-hidden="true">*</span></label>
+                    <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+                    <p id="name-error" class="form-message" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email <span aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required
+                        aria-describedby="email-error">
+                    <p id="email-error" class="form-message" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                    <label for="notification-preference">Notification Preference <span
+                            aria-hidden="true">*</span></label>
+                    <select id="notification-preference" name="notificationPreference" required
+                        aria-describedby="notification-preference-error">
+                        <option value="">Select a preference</option>
+                        <option value="email">Email notifications</option>
+                        <option value="none">No notifications</option>
+                    </select>
+                    <p id="notification-preference-error" class="form-message" role="alert"></p>
+                </div>
+
+                <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+                <button type="submit">Save settings</button>
+            </form>
+        </section>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

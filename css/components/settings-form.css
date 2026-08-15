@@ -1,0 +1,63 @@
+.settings-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-field {
+    display: grid;
+    gap: 7px;
+}
+
+.form-field label {
+    color: #172033;
+    font-weight: 650;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    min-height: 44px;
+    padding: 9px 12px;
+    color: #172033;
+    background: #ffffff;
+    border: 1px solid #aeb7c5;
+    border-radius: 7px;
+}
+
+.form-field input[aria-invalid="true"],
+.form-field select[aria-invalid="true"] {
+    border-color: #b42318;
+}
+
+.form-message {
+    min-height: 1.25em;
+    margin: 0;
+    color: #b42318;
+    font-size: 0.9rem;
+}
+
+.form-status {
+    min-height: 1.5em;
+    color: #176b3a;
+    font-weight: 600;
+}
+
+.settings-form button {
+    min-height: 44px;
+    padding: 10px 16px;
+    color: #ffffff;
+    background: #2457d6;
+    border: 0;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.settings-form button:hover {
+    background: #1d47b2;
+}
+
+@media (max-width: 480px) {
+    .settings-form button {
+        width: 100%;
+    }
+}
