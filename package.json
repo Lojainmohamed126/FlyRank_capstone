@@ -1,0 +1,9 @@
+{
+  "name": "flyrank-capstone",
+  "version": "1.0.0",
+  "description": "FlyRank frontend capstone project",
+  "scripts": {
+    "start": "npx --yes http-server -p 3000 -c-1"
+  },
+  "license": "MIT"
+}

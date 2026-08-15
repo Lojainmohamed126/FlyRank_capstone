@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlyRank — Settings</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/settings-form.css">
+</head>
+<body class="page">
+  <header class="page__header">
+    <div class="page__header-inner">
+      <h1 class="page__title">FlyRank</h1>
+      <p class="page__subtitle">Manage your account preferences</p>
+    </div>
+  </header>
+
+  <main class="page__main">
+    <div class="page__main-inner">
+      <section class="settings" aria-labelledby="settings-heading">
+        <h2 id="settings-heading" class="settings__heading">Settings</h2>
+
+        <form
+          id="settings-form"
+          class="settings-form"
+          novalidate
+          aria-describedby="form-status"
+        >
+          <div id="form-status" class="settings-form__status" role="status" aria-live="polite"></div>
+
+          <div class="settings-form__field">
+            <label class="settings-form__label" for="full-name">Full name</label>
+            <input
+              class="settings-form__input"
+              type="text"
+              id="full-name"
+              name="fullName"
+              autocomplete="name"
+              required
+              minlength="2"
+              maxlength="80"
+              aria-describedby="full-name-error"
+            >
+            <p id="full-name-error" class="settings-form__error" role="alert"></p>
+          </div>
+
+          <div class="settings-form__field">
+            <label class="settings-form__label" for="email">Email address</label>
+            <input
+              class="settings-form__input"
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+              aria-describedby="email-error"
+            >
+            <p id="email-error" class="settings-form__error" role="alert"></p>
+          </div>
+
+          <div class="settings-form__field">
+            <label class="settings-form__label" for="home-airport">Home airport</label>
+            <input
+              class="settings-form__input"
+              type="text"
+              id="home-airport"
+              name="homeAirport"
+              required
+              pattern="[A-Za-z]{3}"
+              maxlength="3"
+              placeholder="e.g. JFK"
+              aria-describedby="home-airport-hint home-airport-error"
+            >
+            <p id="home-airport-hint" class="settings-form__hint">Enter a 3-letter IATA airport code.</p>
+            <p id="home-airport-error" class="settings-form__error" role="alert"></p>
+          </div>
+
+          <div class="settings-form__field">
+            <label class="settings-form__label" for="currency">Preferred currency</label>
+            <select
+              class="settings-form__select"
+              id="currency"
+              name="currency"
+              required
+              aria-describedby="currency-error"
+            >
+              <option value="">Select a currency</option>
+              <option value="USD">USD — US Dollar</option>
+              <option value="EUR">EUR — Euro</option>
+              <option value="GBP">GBP — British Pound</option>
+              <option value="CAD">CAD — Canadian Dollar</option>
+            </select>
+            <p id="currency-error" class="settings-form__error" role="alert"></p>
+          </div>
+
+          <fieldset class="settings-form__fieldset">
+            <legend class="settings-form__legend">Notifications</legend>
+
+            <div class="settings-form__checkbox">
+              <input
+                type="checkbox"
+                id="email-notifications"
+                name="emailNotifications"
+              >
+              <label for="email-notifications">Send me price alerts by email</label>
+            </div>
+          </fieldset>
+
+          <div class="settings-form__actions">
+            <button type="submit" class="settings-form__submit">Save settings</button>
+            <button type="reset" class="settings-form__reset">Reset</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

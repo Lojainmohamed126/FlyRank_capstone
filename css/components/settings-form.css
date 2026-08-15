@@ -1,0 +1,144 @@
+.settings__heading {
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.settings-form {
+  padding: var(--spacing-xl);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.settings-form__status {
+  min-height: 1.25rem;
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9375rem;
+}
+
+.settings-form__status--success {
+  color: var(--color-success);
+}
+
+.settings-form__status--error {
+  color: var(--color-error);
+}
+
+.settings-form__field {
+  margin-bottom: var(--spacing-lg);
+}
+
+.settings-form__label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.settings-form__input,
+.settings-form__select {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color 0.15s ease;
+}
+
+.settings-form__input:hover,
+.settings-form__select:hover {
+  border-color: #94a3b8;
+}
+
+.settings-form__input:focus,
+.settings-form__select:focus {
+  border-color: var(--color-border-focus);
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 0.15);
+}
+
+.settings-form__input--invalid,
+.settings-form__select--invalid {
+  border-color: var(--color-error);
+  background-color: var(--color-error-bg);
+}
+
+.settings-form__hint {
+  margin-top: var(--spacing-xs);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.settings-form__error {
+  min-height: 1.25rem;
+  margin-top: var(--spacing-xs);
+  font-size: 0.8125rem;
+  color: var(--color-error);
+}
+
+.settings-form__fieldset {
+  margin: 0 0 var(--spacing-lg);
+  padding: 0;
+  border: none;
+}
+
+.settings-form__legend {
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.settings-form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.settings-form__checkbox input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-primary);
+}
+
+.settings-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.settings-form__submit,
+.settings-form__reset {
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+.settings-form__submit {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.settings-form__submit:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.settings-form__reset {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.settings-form__reset:hover {
+  background-color: var(--color-bg);
+}
+
+@media (min-width: 30rem) {
+  .settings-form__input[name="homeAirport"] {
+    max-width: 8rem;
+    text-transform: uppercase;
+  }
+}
