@@ -202,3 +202,15 @@ npm start      # Start local dev server
 | Add interactivity | Create or extend a module in `js/modules/`, import in `main.js` |
 | Add static assets | Place files in the appropriate `assets/` subfolder |
 | Add a new npm script | Update `package.json` scripts; document in README |
+
+## Settings Form Rules
+
+1. Settings forms must use visible `<label>` elements associated with every form control.
+
+2. Validation errors must be shown inline, associated with the relevant field using `aria-describedby`, and the invalid control must use `aria-invalid="true"`.
+
+3. Form submission must be tested for empty fields, invalid email input, missing notification preference, and a valid submission before the feature is considered complete.
+
+4. When adding JavaScript modules, keep the application entry point at `js/main.js` and feature modules inside `js/modules/`.
+
+5. After AI-generated code changes, verify the behavior in the browser rather than relying only on the AI's description of the implementation.
